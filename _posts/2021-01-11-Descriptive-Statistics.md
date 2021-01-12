@@ -1,7 +1,7 @@
 ---
 toc: false
 layout: post
-description: terminology for getting started with data EDA statistics.
+description: Terminology for getting started with data EDA statistics.
 categories: [statistics, python]
 title: Data Exploration - Descriptive Statistics
 ---
@@ -28,6 +28,7 @@ From sample we try to extrapolate and come up with analysis on the population.
 ### Biases in samples
 
 - Selection bias 
+
 some records are more likely to be selected. 
 For example if we are collecting a survey and ask an opinion only from people who wish to answer, then we are really collecting only subset that could lead to lot of bias. 
 
