@@ -42,7 +42,7 @@ Lot of times we send request for responses but we never get an answer back or wh
 ### Sample mean
 
 If we have quantitative variables, the first measurement is sample mean.
-The mean of a set of n observations of a variable is denoted as $\barx$ and is defined as sum of all the observations by total number of observations (n).
+The mean of a set of n observations of a variable is denoted as $$\barx$$ and is defined as sum of all the observations by total number of observations (n).
 
 Mean is essentially the centroid of the observations. The mean describes what a “typical” sample value looks like, or where is the “center” of the distribution of the data.
 
