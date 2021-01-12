@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Data Exploration - Descriptive Statistics | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Exploration - Descriptive Statistics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="terminology for getting started with data EDA statistics." />
+<meta property="og:description" content="terminology for getting started with data EDA statistics." />
+<link rel="canonical" href="https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html" />
+<meta property="og:url" content="https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-11T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"terminology for getting started with data EDA statistics.","url":"https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html","@type":"BlogPosting","headline":"Data Exploration - Descriptive Statistics","dateModified":"2021-01-11T00:00:00-06:00","datePublished":"2021-01-11T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/keeplearning/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rchowdary.github.io/keeplearning/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/keeplearning/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/keeplearning/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/keeplearning/about/">About Me</a><a class="page-link" href="/keeplearning/search/">Search</a><a class="page-link" href="/keeplearning/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Exploration - Descriptive Statistics</h1><p class="page-description">terminology for getting started with data EDA statistics.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-11T00:00:00-06:00" itemprop="datePublished">
+        Jan 11, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/keeplearning/categories/#statistics">statistics</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/keeplearning/categories/#python">python</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="descriptive-statistics">Descriptive Statistics</h1>
+
+<h2 id="basic-setup">Basic setup</h2>
+
+<p>It is always important to see how the data comes, what it looks like, and how it is saved etc.</p>
+
+<p>One of the first steps is doing EDA (exploratory data analysis)</p>
+
+<h2 id="sampling">Sampling</h2>
+
+<h3 id="population-and-sample">Population and Sample</h3>
+
+<p>A population is the entire set of objects or events under study. It could be all the people or all the people in a state etc.</p>
+
+<p>A sample is a representative subset that you have data on or of the objects or events under study. It is impossible to obtain/compute the entire population, so we always need sample.</p>
+
+<p>Population is who/what you care about, and Sample is the data you collected.</p>
+
+<p>From sample we try to extrapolate and come up with analysis on the population.</p>
+
+<h3 id="biases-in-samples">Biases in samples</h3>
+
+<ul>
+  <li>Selection bias 
+some records are more likely to be selected. 
+For example if we are collecting a survey and ask an opinion only from people who wish to answer, then we are really collecting only subset that could lead to lot of bias.</li>
+</ul>
+
+<p>on a reviews site, we might have people who are passionate about the product and few people that have bad reviews, so to avoid selection bias we need to make sure both groups to be represented in our sample.</p>
+
+<ul>
+  <li>Non response bias
+Lot of times we send request for responses but we never get an answer back or who dont actually provide correct answers, all these fall into non response bias.</li>
+</ul>
+
+<h2 id="measurements-on-the-data">Measurements on the Data:</h2>
+
+<h3 id="sample-mean">Sample mean</h3>
+
+<p>If we have quantitative variables, the first measurement is sample mean.
+The mean of a set of n observations of a variable is denoted as $\barx$ and is defined as sum of all the observations by total number of observations (n).</p>
+
+<p>Mean is essentially the centroid of the observations. The mean describes what a “typical” sample value looks like, or where is the “center” of the distribution of the data.</p>
+
+<p>The mean is sensitive to extreme values (outliers).</p>
+
+<p>Each time we collect a sample and calculate the mean it will vary so there is some uncertainity with mean.</p>
+
+<h3 id="sample-median">Sample median</h3>
+
+<p>The median of a set of n number of observations in a sample, ordered by value is the middle observation.
+If length is odd, then the middle observation and if the length is even, average of the middle two observations or the 50th percentile.</p>
+
+<p>The median also describes what a typical observation looks like, or where is the center of the distribution of the sample of observations.</p>
+
+  </div><a class="u-url" href="/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/keeplearning/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/keeplearning/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/keeplearning/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/keeplearning/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/keeplearning/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
