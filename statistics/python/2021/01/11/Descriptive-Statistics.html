@@ -8,18 +8,34 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Data Exploration - Descriptive Statistics" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="terminology for getting started with data EDA statistics." />
-<meta property="og:description" content="terminology for getting started with data EDA statistics." />
+<meta name="description" content="Terminology for getting started with data EDA statistics." />
+<meta property="og:description" content="Terminology for getting started with data EDA statistics." />
 <link rel="canonical" href="https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html" />
 <meta property="og:url" content="https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-11T00:00:00-06:00" />
 <script type="application/ld+json">
-{"description":"terminology for getting started with data EDA statistics.","url":"https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html","@type":"BlogPosting","headline":"Data Exploration - Descriptive Statistics","dateModified":"2021-01-11T00:00:00-06:00","datePublished":"2021-01-11T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html"},"@context":"https://schema.org"}</script>
+{"description":"Terminology for getting started with data EDA statistics.","url":"https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html","@type":"BlogPosting","headline":"Data Exploration - Descriptive Statistics","dateModified":"2021-01-11T00:00:00-06:00","datePublished":"2021-01-11T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://rchowdary.github.io/keeplearning/statistics/python/2021/01/11/Descriptive-Statistics.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/keeplearning/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rchowdary.github.io/keeplearning/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/keeplearning/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
 
 <script>
 function wrap_img(fn) {
@@ -71,7 +87,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Data Exploration - Descriptive Statistics</h1><p class="page-description">terminology for getting started with data EDA statistics.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-11T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Data Exploration - Descriptive Statistics</h1><p class="page-description">Terminology for getting started with data EDA statistics.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-11T00:00:00-06:00" itemprop="datePublished">
         Jan 11, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -119,10 +135,11 @@ window.onload = wrap_img;
 <h3 id="biases-in-samples">Biases in samples</h3>
 
 <ul>
-  <li>Selection bias 
-some records are more likely to be selected. 
-For example if we are collecting a survey and ask an opinion only from people who wish to answer, then we are really collecting only subset that could lead to lot of bias.</li>
+  <li>Selection bias</li>
 </ul>
+
+<p>some records are more likely to be selected. 
+For example if we are collecting a survey and ask an opinion only from people who wish to answer, then we are really collecting only subset that could lead to lot of bias.</p>
 
 <p>on a reviews site, we might have people who are passionate about the product and few people that have bad reviews, so to avoid selection bias we need to make sure both groups to be represented in our sample.</p>
 
